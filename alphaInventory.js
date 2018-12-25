@@ -12,7 +12,13 @@ function alphaCount (alphabet, text) {
       res[i] = res[i] ? res[i]+1 : 1;
     }
   }
-  return res;
+
+  let res2 = ""
+  for(i of Object.keys(res)) {
+    res2 += i +":"+ res[i] + ","
+  }
+  res2 = res2.slice(0,-1)
+  return res2;
 }
 
 
